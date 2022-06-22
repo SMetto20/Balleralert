@@ -84,7 +84,7 @@ public class PlayerActivity extends AppCompatActivity {
 
         NbaApi nbaApi = NBAclient.getClient();
         Call<Players> call = nbaApi.getPlayers("1", "7", "");
-//        Call<Team> call2 = nbaApi.getTeams("0", "30");
+//
         call.enqueue(new Callback<Players>() {
             @Override
             public void onResponse(Call<Players> call, Response<Players> response) {
@@ -92,17 +92,7 @@ public class PlayerActivity extends AppCompatActivity {
                     Toast.makeText(PlayerActivity.this, "success" + response.body().getData().size(), Toast.LENGTH_SHORT).show();
 
                     Players players = response.body();
-//               String[] play = new String[players.size()];
-//               String[] Teams = new String[players.size()];
-//               for(int i =0; i< play.length; i++){
-//                   play[i] = players.get(i).getFirstName();
-//                   play[i] = players.get(i).getLastName();
 //
-//               }
-//               for(int i =0; i< Teams.length; i++){
-//                  Team team = players.get(i).getTeam();
-//
-//               }
                     PlayerAdapter playerAdapter = new PlayerAdapter(PlayerActivity.this, players.getData(),playerImages);
                     LinearLayoutManager linearLayoutManager = new LinearLayoutManager(PlayerActivity.this, LinearLayoutManager.VERTICAL, false);
                     mrecyclerView.setLayoutManager(linearLayoutManager);

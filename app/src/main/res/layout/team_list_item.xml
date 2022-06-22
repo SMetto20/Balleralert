@@ -6,13 +6,16 @@
     android:layout_height="wrap_content">
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="202dp"
-        android:layout_height="169dp"
+        android:id="@+id/teamImage"
+        android:layout_width="145dp"
+        android:layout_height="135dp"
+        android:layout_marginStart="32dp"
+        android:contentDescription="TODO"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@drawable/cavslogo" />
+        app:layout_constraintVertical_bias="0.0"
+        tools:srcCompat="@drawable/celtics_removebg_preview"></ImageView>
 
     <TextView
         android:id="@+id/teamname"
@@ -21,20 +24,22 @@
         android:layout_marginTop="16dp"
         android:text="Teamname"
         android:textColor="@color/white"
+        android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.014"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.159"
+        app:layout_constraintStart_toEndOf="@+id/teamImage"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/conference"
-        android:layout_width="75dp"
-        android:layout_height="17dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="132dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
         android:text="conference"
         android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="17sp"
+        app:layout_constraintStart_toEndOf="@+id/teamImage"
         app:layout_constraintTop_toBottomOf="@+id/teamname" />
 
     <TextView
@@ -42,11 +47,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="city"
-        android:textColor="@color/white"
+        android:textColor="@color/yellow"
+        android:textSize="17sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.01"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.097"
+        app:layout_constraintStart_toEndOf="@+id/teamImage"
         app:layout_constraintTop_toBottomOf="@+id/conference"
-        app:layout_constraintVertical_bias="0.219" />
+        app:layout_constraintVertical_bias="0.407" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -20,10 +20,11 @@ import java.util.List;
 public class TeamAdapter extends RecyclerView.Adapter<TeamAdapter.MyViewholder> {
     Context context;
     List<Team> teams;
-
-    public TeamAdapter(Context context, List<Team> teams) {
+    int[] images;
+    public TeamAdapter(Context context, List<Team> teams,   int[] images) {
         this.context = context;
         this.teams = teams;
+        this.images= images;
     }
 
     @NonNull
@@ -39,6 +40,8 @@ public class TeamAdapter extends RecyclerView.Adapter<TeamAdapter.MyViewholder> 
         holder.teamName.setText(team.getFullName());
         holder.conference.setText(team.getConference());
         holder.city.setText(team.getCity());
+        holder.imageView.setImageResource(images[position]);
+
 
     }
 
@@ -56,7 +59,7 @@ public class TeamAdapter extends RecyclerView.Adapter<TeamAdapter.MyViewholder> 
             teamName = itemView.findViewById(R.id.teamname);
 //            team= itemView.findViewById(R.id.team);
             city = itemView.findViewById(R.id.city);
-            imageView = itemView.findViewById(R.id.imageView);
+            imageView = itemView.findViewById(R.id.teamImage);
 //
         }
     }
