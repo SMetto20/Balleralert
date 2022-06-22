@@ -3,6 +3,7 @@ package interfaces;
 import com.moringaschool.balleralert.PlayerDatum;
 import com.moringaschool.balleralert.Players;
 import com.moringaschool.balleralert.Team;
+import com.moringaschool.balleralert.TheTeams;
 
 import java.util.List;
 
@@ -18,7 +19,7 @@ public interface NbaApi {
             @Query("search") String search
     );
     @GET("api/v1/teams")
-    Call<Team> getTeams(
+    Call<TheTeams> getTeams(
             @Query("page") String page,
             @Query("per_page") String perPage
     );

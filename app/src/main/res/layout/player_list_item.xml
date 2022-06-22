@@ -18,8 +18,9 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="101dp"
-        android:layout_height="83dp"
+        android:layout_width="183dp"
+        android:layout_height="158dp"
+
         android:src="@drawable/ike_anigbogu_removebg_preview"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,7 +30,7 @@
         android:id="@+id/playername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="5dp"
+
         android:text="Playername"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -48,7 +49,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/playername"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.545" />
+        app:layout_constraintVertical_bias="0.53" />
 
     <TextView
         android:id="@+id/position"
@@ -61,7 +62,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/secondname"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.553" />
+        app:layout_constraintVertical_bias="0.53" />
 
     <!--    <TextView-->
     <!--        android:id="@+id/height"-->

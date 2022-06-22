@@ -14,18 +14,21 @@ import com.moringaschool.balleralert.R;
 import com.moringaschool.balleralert.PlayerDatum;
 import com.moringaschool.balleralert.Team;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class PlayerAdapter extends RecyclerView.Adapter<PlayerAdapter.MyViewholder> {
 
       Context context;
     List<PlayerDatum> playersList;
+    List<Team>teams;
+
     int[] images;
 
-    public PlayerAdapter(Context context, List<PlayerDatum> playersList) {
+    public PlayerAdapter(Context context, List<PlayerDatum> playersList, int[] images) {
         this.context = context;
         this.playersList = playersList;
-//        this.images=images;
+        this.images=images;
     }
 
 
@@ -39,19 +42,21 @@ public class PlayerAdapter extends RecyclerView.Adapter<PlayerAdapter.MyViewhold
 
     @Override
     public void onBindViewHolder(@NonNull MyViewholder holder, int position) {
-        Team teams = new Team();
+
         PlayerDatum playerDatum = playersList.get(position);
+
      holder.playerfirstname.setText(playerDatum.getFirstName());
         holder.secondname.setText(playerDatum.getLastName());
-//        holder.team.setText(teams.getName());
+//        holder.team.setText(teams.get);
         holder.position.setText(playerDatum.getPosition());
-//        holder.imageView.setImageResource(images[position]);
+        holder.imageView.setImageResource(images[position]);
 //        holder.height.setText((Integer) playerDatum.getHeightFeet());
     }
 
     @Override
     public int getItemCount() {
         return playersList.size();
+
     }
 
     public class MyViewholder extends RecyclerView.ViewHolder {
